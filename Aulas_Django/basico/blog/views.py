@@ -1,10 +1,9 @@
-#from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render # type: ignore
+#from django.http import HttpResponse
 
 def blog(request):
     print("Olá, tudo bem?")
-    return HttpResponse("<b>Olá, aqui é Django no blog</b>")
+    return render(request,'assets_blog/blog.html')
 
 def exemplo(request):
-    return HttpResponse("<i> Exemplo do blog </i>"+
-                        '<br><br><a href="/blog/"><button> Salve </button></a>')
+    return render(request,'assets_blog/exemplo.html')

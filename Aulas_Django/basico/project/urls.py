@@ -19,10 +19,12 @@ from django.urls import path
 from home import views as views_home
 from blog import views as views_blog
 
+app_name = 'blog'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views_home.home),
-    path('blog/', views_blog.blog),
-    path('blog/exemplo/', views_blog.exemplo),
+    path('', views_home.home, name= 'home'),
+    path('home/', views_home.home, name= 'home'),
+    path('blog/', views_blog.blog, name='blog'),
+    path('blog/exemplo/', views_blog.exemplo, name= 'exemplo'),
 ]

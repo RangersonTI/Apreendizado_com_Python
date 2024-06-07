@@ -3,7 +3,18 @@ from django.shortcuts import render # type: ignore
 
 def blog(request):
     print("Olá, tudo bem?")
-    return render(request,'assets_blog/blog.html')
+    title = {
+        'title': 'Blog'
+        }
+    return render(request,'assets_blog/blog.html', title)
 
 def exemplo(request):
-    return render(request,'assets_blog/exemplo.html')
+    
+    text = '<b>Erro Windows XP</b>'
+    number = '4'
+    var = {
+        'title': 'Erro do Windows XP',
+        'text': 'Erro do Windows XP'
+    }
+    
+    return render(request,'assets_blog/exemplo.html', var)

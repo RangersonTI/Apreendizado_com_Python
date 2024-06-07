@@ -3,4 +3,9 @@ from django.shortcuts import render #Type: ignore
 
 def home(request):
     print('home')
-    return render(request, 'assets_home/index.html')
+    
+    var = {
+        'title': 'Home',
+        'text': 'Minha Home'
+    }
+    return render(request, 'assets_home/index.html', var)
